@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150818224542) do
+ActiveRecord::Schema.define(version: 20150818230220) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,9 +25,9 @@ ActiveRecord::Schema.define(version: 20150818224542) do
 
   create_table "month_budgets", force: :cascade do |t|
     t.decimal  "target_amount"
-    t.decimal  "current_amount"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.decimal  "current_amount", default: 0.0
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
     t.integer  "user_id"
   end
 
@@ -42,9 +42,9 @@ ActiveRecord::Schema.define(version: 20150818224542) do
 
   create_table "week_budgets", force: :cascade do |t|
     t.decimal  "target_amount"
-    t.decimal  "current_amount"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.decimal  "current_amount", default: 0.0
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
     t.integer  "user_id"
   end
 
