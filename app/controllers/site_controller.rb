@@ -5,12 +5,12 @@ class SiteController < ApplicationController
   def about
   end
 
-  def cookies
+  def cookies_info
   end
 
-  def privacy
+  def privacy_info
   end
 
-  def tech
+  def tech_info
   end
 end

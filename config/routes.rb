@@ -4,11 +4,11 @@ Rails.application.routes.draw do
 
   get '/about', to: 'site#about', as: 'about'
 
-  get '/cookies', to: 'site#cookies', as: 'cookies_info'
+  get '/cookies', to: 'site#cookies_info', as: 'cookies_info'
 
-  get '/privacy', to: 'site#privacy', as: 'privacy_info'
+  get '/privacy', to: 'site#privacy_info', as: 'privacy_info'
 
-  get '/tech', to: 'site#tech', as: 'tech_info'
+  get '/tech', to: 'site#tech_info', as: 'tech_info'
 
   resources :users, except: :index do
     resources :week_budgets, except: :index do 
