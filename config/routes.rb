@@ -12,10 +12,10 @@ Rails.application.routes.draw do
 
   resources :users, except: :index do
     resources :week_budgets, except: :index do 
-      resources :expenditures, except: :index
+      resources :expenditures, except: [:index, :show]
     end
     resources :month_budgets, except: :index do
-      resources :expenditures, except: :index
+      resources :expenditures, except: [:index, :show]
     end
   end
 
