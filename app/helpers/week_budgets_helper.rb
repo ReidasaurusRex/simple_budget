@@ -1,0 +1,2 @@
+module WeekBudgetsHelper
+end

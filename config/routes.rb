@@ -1,4 +1,70 @@
 Rails.application.routes.draw do
+  get 'access/sign_in_attempt'
+
+  get 'access/sign_out'
+
+  get 'site/landing'
+
+  get 'site/about'
+
+  get 'site/cookies'
+
+  get 'site/privacy'
+
+  get 'site/tech'
+
+  get 'expenditures/new'
+
+  get 'expenditures/create'
+
+  get 'expenditures/edit'
+
+  get 'expenditures/update'
+
+  get 'expenditures/destroy'
+
+  get 'month_budgets/new'
+
+  get 'month_budgets/create'
+
+  get 'month_budgets/show'
+
+  get 'month_budgets/edit'
+
+  get 'month_budgets/update'
+
+  get 'month_budgets/delete'
+
+  get 'month_budgets/destroy'
+
+  get 'week_budgets/new'
+
+  get 'week_budgets/create'
+
+  get 'week_budgets/show'
+
+  get 'week_budgets/edit'
+
+  get 'week_budgets/update'
+
+  get 'week_budgets/delete'
+
+  get 'week_budgets/destroy'
+
+  get 'users/new'
+
+  get 'users/create'
+
+  get 'users/show'
+
+  get 'users/edit'
+
+  get 'users/update'
+
+  get 'users/delete'
+
+  get 'users/destroy'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
