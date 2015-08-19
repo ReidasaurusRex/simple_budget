@@ -1,69 +1,30 @@
 Rails.application.routes.draw do
-  get 'access/sign_in_attempt'
+  # site views
+  root to: 'site#landing'
 
-  get 'access/sign_out'
+  get '/about', to: 'site#about', as: 'about'
 
-  get 'site/landing'
+  get '/cookies', to: 'site#cookies', as: 'cookies_info'
 
-  get 'site/about'
+  get '/privacy', to: 'site#privacy', as: 'privacy_info'
 
-  get 'site/cookies'
+  get '/tech', to: 'site#tech', as: 'tech_info'
 
-  get 'site/privacy'
+  resources :users, except: :index do
+    resources :week_budgets, except: :index do 
+      resources :expenditures, except: :index
+    end
+    resources :month_budgets, except: :index do
+      resources :expenditures, except: :index
+    end
+  end
 
-  get 'site/tech'
+  get '/users/:id/delete', to: 'users#delete', as: 'delete_user'
 
-  get 'expenditures/new'
+  get '/users/:user_id/week_budgets/:id/delete', to: 'week_budgets#delete'
 
-  get 'expenditures/create'
+  get '/users/:user_id/month_budgets/:id/delete', to: 'month_budgets#delete'
 
-  get 'expenditures/edit'
-
-  get 'expenditures/update'
-
-  get 'expenditures/destroy'
-
-  get 'month_budgets/new'
-
-  get 'month_budgets/create'
-
-  get 'month_budgets/show'
-
-  get 'month_budgets/edit'
-
-  get 'month_budgets/update'
-
-  get 'month_budgets/delete'
-
-  get 'month_budgets/destroy'
-
-  get 'week_budgets/new'
-
-  get 'week_budgets/create'
-
-  get 'week_budgets/show'
-
-  get 'week_budgets/edit'
-
-  get 'week_budgets/update'
-
-  get 'week_budgets/delete'
-
-  get 'week_budgets/destroy'
-
-  get 'users/new'
-
-  get 'users/create'
-
-  get 'users/show'
-
-  get 'users/edit'
-
-  get 'users/update'
-
-  get 'users/delete'
-
-  get 'users/destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
