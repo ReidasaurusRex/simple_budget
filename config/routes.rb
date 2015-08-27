@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   # site views
   root to: 'site#landing'
 
+  post '/sign_in', to: 'access#sign_in_attempt', as: 'sign_in'
+
+  delete '/sign_out', to: 'access#sign_out', as: 'sign_out'
+
   get '/about', to: 'site#about', as: 'about'
 
   get '/cookies', to: 'site#cookies_info', as: 'cookies_info'
