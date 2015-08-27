@@ -1,6 +1,6 @@
 class AccessController < ApplicationController
   def sign_in_attempt
-
+    login_attempt(params[:email], params[:password])
   end
 
   def sign_out
@@ -9,7 +9,7 @@ class AccessController < ApplicationController
   private
   def login_attempt(email, password)
     if email.present? && password.present? 
-      user = User.find_by_email(email: email)
+      user = User.where(email: email).first
       if user
         authorized_user = user.authenticate(password)
         if authorized_user

@@ -1,2 +1,15 @@
 <h1>Site#landing</h1>
 <p>Find me in app/views/site/landing.html.erb</p>
+<div class="signInBox">
+  <%= form_tag(sign_in_path) %>
+  <p><%= label_tag :email, "Email: ", class: "signInEmail" %>
+  <%= text_field_tag(:email) %>
+  </p>
+  <p>
+    <%= label_tag :password, "Password: ", class: "signInPassword" %>
+    <%= password_field_tag(:password) %>
+  </p>
+  <p>
+    <%= submit_tag "Sign In", class: "signInSubmit" %>
+  </p>
+</div>
