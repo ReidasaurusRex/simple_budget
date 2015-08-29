@@ -25,14 +25,14 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:id, :username, :email, :password, :password_digest)
+    params.require(:user).permit(:id, :username, :email, :password, :password_confirmation, :password_digest)
   end
 
   def create_user(new_user_params)
     @user = User.new(new_user_params)
     if @user.save
       session[:user_id] = @user.id
-      redirect_to user_show_path(@user)
+      redirect_to user_path(@user)
     else
       @user.destroy
       flash[:alert] = @user.errors.full_messages.join(", ")
