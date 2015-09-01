@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <th>Amount</th>
+    <th>Location</th>
+    <th>Date</th>
+    <th>Time</th>
+  </tr>
+  <% expenditures.each do |expenditure| %>
+  <tr>
+    <td><%= expenditure.amount %></td>
+    <td><%= expenditure.location %></td>
+    <td><%= expenditure.created_at.strftime("%m/%d/%Y") %></td>
+    <td><%= expenditure.created_at.strftime("%I:%M%P") %></td>
+  </tr>
+  <% end %>
+</table>
