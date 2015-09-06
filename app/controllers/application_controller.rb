@@ -9,4 +9,13 @@ class ApplicationController < ActionController::Base
       redirect_to "/"
     end
   end
+
+  def get_user
+    @user = User.find_by_id(session[:user_id])
+    if @user
+      return @user
+    # else
+    #   redirect to error page
+    end
+  end
 end

@@ -1,22 +1,15 @@
+
 <h1><%= @user.username + '\'s budget summary' %></h1>
 
 <div class="userShowWeekBudget">
   <h2>Week Budget</h2>
-  <% if @user.week_budget %>
-    <h3><%= @user.week_budget %></h2>
-  <% else %>
-    <h3><%= link_to "Create Week Budget", new_user_week_budget_path(@user) %></h2>
-  <% end %>
+  <%= show_week_budget_summary(@user) %>
 </div>
 
 
 <div class="userShowMonthBudget">
   <h2>Month Budget</h2>
-  <% if @user.month_budget %>
-    <h3><%= @user.month_budget %></h2>
-  <% else %>
-    <h3><%= link_to "Create Month Budget", new_user_month_budget_path(@user) %></h2>
-  <% end %>
+  <%= show_month_budget_summary(@user) %>
 </div>
 
 <div class="userExpenditures">

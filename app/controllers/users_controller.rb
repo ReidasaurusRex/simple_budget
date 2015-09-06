@@ -39,14 +39,4 @@ class UsersController < ApplicationController
       redirect_to new_user_path
     end
   end
-
-  def get_user
-    @user = User.find_by_id(params[:id])
-    if @user
-      return @user
-    # else
-    #   redirect to error page
-    end
-  end
-
 end
