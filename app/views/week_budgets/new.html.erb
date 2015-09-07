@@ -1,2 +1,9 @@
 <h1>WeekBudgets#new</h1>
 <p>Find me in app/views/week_budgets/new.html.erb</p>
+
+<div class="newBudgetForm">
+  <%= form_for [@user, WeekBudget.new] do |form| %>
+    <p><%= form.text_field :target_amount %></p>
+    <p><%= form.submit "Create Budget" %></p>
+  <% end %>
+</div>

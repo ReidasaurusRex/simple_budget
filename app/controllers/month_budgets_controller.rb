@@ -44,7 +44,7 @@ class MonthBudgetsController < ApplicationController
     else
       month_budget.destroy
       binding.pry
-      flash[:alert] = month_budget.errors.full_messages.join(", ")
+      flash[:alert] = "Please enter a number for your budget"
       redirect_to new_user_month_budget_path(@user)
     end
   end
