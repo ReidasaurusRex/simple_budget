@@ -2,7 +2,7 @@ class MonthBudgetsController < ApplicationController
   before_action :require_login
   before_action :get_user
   before_action :get_month_budget
-  before_action :prevent_new_month_budget_if_existing
+  before_action :prevent_new_month_budget_if_existing, only: [:new, :create]
   def new
   end
 
@@ -50,6 +50,6 @@ class MonthBudgetsController < ApplicationController
   end
 
   def prevent_new_month_budget_if_existing
-    redirect_to edit_user_month_path({user_id: @user.id, id: @month_budget.id}) if @user.month_budget
+    redirect_to edit_user_month_budget_path({user_id: @user.id, id: @month_budget.id}) if @user.month_budget
   end
 end
