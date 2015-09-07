@@ -1,0 +1,4 @@
+<p><%= @user.month_budget.current_amount %> spent of <%= @user.month_budget.target_amount %> <span><%= percent_of_budget_spent(@user.month_budget) %></span></p>
+<p><%= link_to "change budget", edit_user_month_budget_path({user_id: @user.id, id: @user.month_budget.id}) %></p>
+<p><%= link_to "view month", user_month_budget_path({user_id: @user.id, id: @user.month_budget.id}) %></p>
+
