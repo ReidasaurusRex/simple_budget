@@ -17,6 +17,7 @@ class MonthBudgetsController < ApplicationController
   end
 
   def update
+    update_month_budget(month_budget_params)
   end
 
   def delete
@@ -30,6 +31,10 @@ class MonthBudgetsController < ApplicationController
   private
   def get_month_budget
     @month_budget = @user.month_budget
+  end
+
+  def prevent_new_month_budget_if_existing
+    redirect_to edit_user_month_budget_path({user_id: @user.id, id: @month_budget.id}) if @user.month_budget
   end
 
   def month_budget_params
@@ -48,8 +53,9 @@ class MonthBudgetsController < ApplicationController
       redirect_to new_user_month_budget_path(@user)
     end
   end
-
-  def prevent_new_month_budget_if_existing
-    redirect_to edit_user_month_budget_path({user_id: @user.id, id: @month_budget.id}) if @user.month_budget
-  end
+  
+  def update_month_budget(edit_month_budget_params)
+    @month_budget.update(edit_month_budget_params)
+    redirect_to user_month_budget_path({user_id: @user.id, id: @month_budget.id})
+  end  
 end

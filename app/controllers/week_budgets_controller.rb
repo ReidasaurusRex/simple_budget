@@ -17,6 +17,7 @@ class WeekBudgetsController < ApplicationController
   end
 
   def update
+    update_week_budget(week_budget_params)
   end
 
   def delete
@@ -29,7 +30,11 @@ class WeekBudgetsController < ApplicationController
 
   private
   def get_week_budget
-    @week_budget = @user.month_budget
+    @week_budget = @user.week_budget
+  end
+
+  def prevent_new_week_budget_if_existing
+    redirect_to edit_user_week_budget_path({user_id: @user.id, id: @week_budget.id}) if @user.week_budget
   end
 
   def week_budget_params
@@ -47,8 +52,9 @@ class WeekBudgetsController < ApplicationController
     end
   end
 
-  def prevent_new_week_budget_if_existing
-    redirect_to edit_user_week_budget_path({user_id: @user.id, id: @week_budget.id}) if @user.week_budget
+  def update_week_budget(edit_week_budget_params)
+    @week_budget.update(edit_week_budget_params)
+    redirect_to user_week_budget_path({user_id: @user.id, id: @week_budget.id})
   end
 end
 

@@ -1,2 +1,7 @@
-<h1>MonthBudgets#edit</h1>
-<p>Find me in app/views/month_budgets/edit.html.erb</p>
+<div class="userBudgetForm">
+  <h2>Edit Month Budget</h2>
+  <%= form_for [@user, @month_budget] do |form| %>
+    <p><%= form.text_field :target_amount %></p>
+    <p><%= form.submit "Change Budget" %></p>
+  <% end %>
+</div>
