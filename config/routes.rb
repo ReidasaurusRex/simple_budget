@@ -21,6 +21,7 @@ Rails.application.routes.draw do
     resources :month_budgets, except: :index do
       resources :expenditures, except: [:index, :show]
     end
+    resources :expenditures, except: [:index, :show]
   end
 
   get '/users/:id/delete', to: 'users#delete', as: 'delete_user'
