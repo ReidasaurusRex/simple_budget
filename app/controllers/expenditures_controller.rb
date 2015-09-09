@@ -2,6 +2,7 @@ class ExpendituresController < ApplicationController
   before_action :get_user
   before_action :require_login
   def new
+    @new_expenditure_page = true # Ensuring new expenditure button doesn't appear on new expenditure view
   end
 
   def create
