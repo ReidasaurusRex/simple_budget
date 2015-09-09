@@ -26,4 +26,10 @@ class AccessController < ApplicationController
       redirect_to '/', notice: 'Please enter an email and password'
     end
   end
+
+  def log_out
+    session[:user_id] = nil
+    flash[:notice] = "Successfully signed out"
+    redirect_to '/'
+  end
 end
