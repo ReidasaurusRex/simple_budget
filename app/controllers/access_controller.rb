@@ -4,6 +4,7 @@ class AccessController < ApplicationController
   end
 
   def sign_out
+    log_out
   end
 
   private

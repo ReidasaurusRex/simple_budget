@@ -9,6 +9,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @home = true # Prevent home button on page
   end
 
   def edit

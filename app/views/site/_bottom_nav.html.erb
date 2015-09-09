@@ -1,1 +1,5 @@
-<div class="bottom-nav"></div>
+<div class="bottom-nav">
+  <%= link_to("About", about_path) unless @about %>
+  <%= link_to("Home", root_path) unless @home %>
+  <%= sign_out_button %>
+</div>

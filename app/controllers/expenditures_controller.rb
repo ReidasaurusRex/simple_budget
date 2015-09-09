@@ -20,10 +20,8 @@ class ExpendituresController < ApplicationController
 
   private
   def create_expenditures(user, expenditure_params)
-    binding.pry
     Expenditure.add_expenditures(user, expenditure_params)
-    binding.pry
-    redirect_to :back
+    redirect_to user_path(@user)
   end
 
   def expenditure_params
