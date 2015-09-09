@@ -43,12 +43,10 @@ class MonthBudgetsController < ApplicationController
 
   def create_month_budget(new_month_budget_params)
     month_budget = MonthBudget.new(new_month_budget_params)
-    binding.pry
     if month_budget.save
       redirect_to user_month_budget_path({user_id: @user.id, id: month_budget.id})
     else
       month_budget.destroy
-      binding.pry
       flash[:alert] = "Please enter a number for your budget"
       redirect_to new_user_month_budget_path(@user)
     end
