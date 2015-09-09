@@ -1,6 +1,5 @@
 <div class="budgetShow">
-  <p>$<%= @week_budget.current_amount %></p>
-  <p>$<%= @week_budget.target_amount %></p>
+  <h3><%= show_week_budget_summary(@user) %></h3>
 
   <div class="budgetExpenditures">
     <%= show_expenditures(@week_budget) %>

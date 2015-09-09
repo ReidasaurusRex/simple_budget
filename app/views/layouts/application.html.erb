@@ -7,19 +7,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<% flash.each do |key, value| %>
-  
-    <% if key == "notice" %>
-      <%= content_tag :div, value, class: "text-center alert alert-warning flashMessage" %>
-    <% elsif key == "alert" %>
-      <%= content_tag :div, value, class: "text-center alert alert-danger flashMessage" %>
-    <% else %>
-      <%= content_tag :div, value, class: "text-center alert alert-success flashMessage" %>
+  <%= new_expenditure_if_logged_in %>
+  <% flash.each do |key, value| %>
+    
+      <% if key == "notice" %>
+        <%= content_tag :div, value, class: "text-center alert alert-warning flashMessage" %>
+      <% elsif key == "alert" %>
+        <%= content_tag :div, value, class: "text-center alert alert-danger flashMessage" %>
+      <% else %>
+        <%= content_tag :div, value, class: "text-center alert alert-success flashMessage" %>
+      <% end %>
     <% end %>
-  <% end %>
 
-<%= yield %>
+  <%= yield %>
 
 </body>
 </html>

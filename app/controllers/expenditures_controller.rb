@@ -5,7 +5,7 @@ class ExpendituresController < ApplicationController
   end
 
   def create
-    create_expenditure(expenditure_params)
+    create_expenditures(@user, expenditure_params)
   end
 
   def edit
@@ -18,10 +18,11 @@ class ExpendituresController < ApplicationController
   end
 
   private
-  def create_expenditure(expenditure_params)
+  def create_expenditures(user, expenditure_params)
     binding.pry
-    @user.expenditures.create(expenditure_params)
-    redirect_to user_path(@user)
+    Expenditure.add_expenditures(user, expenditure_params)
+    binding.pry
+    redirect_to :back
   end
 
   def expenditure_params
