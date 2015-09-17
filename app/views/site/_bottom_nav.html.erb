@@ -1,5 +1,11 @@
-<div class="bottom-nav">
-  <%= link_to("About", about_path) unless @about %>
-  <%= link_to("Home", root_path) unless @home %>
-  <%= sign_out_button %>
+<div class="nav-bar bottom-nav">
+  <div class="bottom-nav-button bottom-nav-about-button">
+    <%= link_to("About", about_path) unless @about %>
+  </div>
+  <div class="bottom-nav-button bottom-nav-home-button">
+    <%= link_to("Home", root_path) unless @home %>
+  </div>  
+  <div class="bottom-nav-button bottom-nav-signout-button">
+    <%= sign_out_button %>
+  </div>
 </div>
