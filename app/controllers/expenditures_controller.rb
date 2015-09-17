@@ -6,7 +6,8 @@ class ExpendituresController < ApplicationController
   end
 
   def create
-    create_expenditures(@user, expenditure_params)
+    binding.pry
+    create_expenditures(@user, expenditure_params, params[:omit_from_week])
   end
 
   def edit
@@ -19,8 +20,8 @@ class ExpendituresController < ApplicationController
   end
 
   private
-  def create_expenditures(user, expenditure_params)
-    Expenditure.add_expenditures(user, expenditure_params)
+  def create_expenditures(user, expenditure_params, omit)
+    Expenditure.add_expenditures(user, expenditure_params, omit)
     redirect_to user_path(@user)
   end
 
