@@ -1,9 +1,11 @@
-<h1>MonthBudgets#new</h1>
-<p>Find me in app/views/month_budgets/new.html.erb</p>
-
-<div class="newBudgetForm">
-  <%= form_for [@user, MonthBudget.new] do |form|  %>
-    <p><%= form.text_field :target_amount %></p>
-    <p><%= form.submit "Create Budget" %></p>
-  <% end %>
+<div class="budgetNew">
+  <h2>Create Month Budget</h2>
+  <div class="budgetNewForm">
+    <%= form_for [@user, MonthBudget.new] do |form|  %>
+      <div class="formField">
+        <p><%= form.text_field :target_amount %><br><span>Target Budget Amount</span></p>
+      </div>
+      <p><%= form.submit "Create Budget" %></p>
+    <% end %>
+  </div>
 </div>

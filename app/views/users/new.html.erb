@@ -1,24 +1,20 @@
 <h1>Sign Up</h1>
 <div class="newUserForm">
   <%= form_for User.new do |f| %>
-  <p>
-    <%= f.label :username %>
-    <%= f.text_field(:username, required: true, autofocus: true) %>
-  </p>
-  <p>
-    <%= f.label :email %>
-    <%= f.text_field(:email, required: true) %>
-  </p>
-  <p>
-    <%= f.label :password %>
-    <%= f.password_field(:password, required: true) %>
-  </p>
-  <p>
-    <%= f.label "Confirm Password" %>
-    <%= f.password_field(:password_confirmation, required: true) %>
-  </p>
-  <p>
-  <%= f.submit "Create Account" %>
-  </p>
+    <div class="formField">
+      <p><%= f.text_field(:username, required: true, autofocus: true) %><br><span>Username</span></p>
+    </div>
+    <div class="formField">
+      <p><%= f.text_field(:email, required: true) %><br><span>Email</span></p>
+    </div>
+    <div class="formField">
+      <p><%= f.password_field(:password, required: true) %><br><span>Password</span></p>
+    </div>
+    <div class="formField">
+      <p><%= f.password_field(:password_confirmation, required: true) %><br><span>Confirm Password</span></p>
+    </div>
+    <p>
+    <%= f.submit "Create Account" %>
+    </p>
   <% end %>
 </div>
