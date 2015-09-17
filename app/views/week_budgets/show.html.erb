@@ -1,6 +1,9 @@
 <div class="budgetShow">
-  <h3><%= show_week_budget_summary(@user) %></h3>
-
+  <div class="budgetShowSummary">
+    <h2>Your Week Budget</h2>
+    <%= show_week_budget_summary(@user) %>
+    <h3><%= link_to "edit budget", edit_user_week_budget_path({user_id: @user.id, id: @user.week_budget.id}) %></h3>
+  </div>
   <div class="budgetExpenditures">
     <%= show_expenditures(@week_budget) %>
   </div>

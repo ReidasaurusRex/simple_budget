@@ -1,7 +1,9 @@
 <div class="budgetShow">
-  <p>$<%= @month_budget.target_amount %></p>
-  <p>$<%= @month_budget.current_amount %></p>
-
+  <div class="budgetShowSummary">
+    <h2>Your Month Budget</h2>
+    <%= show_month_budget_summary(@user) %>
+    <h3><%= link_to "edit budget", edit_user_month_budget_path({user_id: @user.id, id: @user.month_budget.id}) %></h3>
+  </div>
   <div class="budgetExpenditures">
     <%= show_expenditures(@month_budget) %>
   </div>  
