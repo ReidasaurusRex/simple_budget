@@ -2,7 +2,7 @@
   <h2>Create Month Budget</h2>
   <div class="budgetNewForm">
     <%= form_for [@user, MonthBudget.new] do |form|  %>
-      <div class="formField">
+      <div class="form-field">
         <p><%= form.text_field :target_amount %><br><span>Target Budget Amount</span></p>
       </div>
       <p><%= form.submit "Create Budget" %></p>

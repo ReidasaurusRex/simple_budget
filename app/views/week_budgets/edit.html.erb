@@ -1,7 +1,7 @@
 <div class="userBudgetForm">
   <h2>Edit Week Budget</h2>
   <%= form_for [@user, @week_budget] do |form| %>
-    <div class="formField">
+    <div class="form-field">
       <p><%= form.text_field :target_amount %><br><span>Edit Amount</span></p>
     </div>
     <p><%= form.submit "Change Budget" %></p>
