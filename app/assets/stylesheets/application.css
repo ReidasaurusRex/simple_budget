@@ -14,3 +14,30 @@
  *= require_self
  *= require font-awesome
  */
+a {
+  text-decoration: none;
+}
+
+.nav-bar {
+  background-color: red;
+  height: 10%;
+  position: fixed;
+  width: 100%;
+}
+
+.top-nav {
+  top: 0px;
+}
+
+.bottom-nav {
+  bottom: 0px;
+}
+
+.nav-bar div {
+  display:inline;
+  height: 80%;
+}
+
+.bottom-nav :first-child {
+  padding-left: 10%
+}
