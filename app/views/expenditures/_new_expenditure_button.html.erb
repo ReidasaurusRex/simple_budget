@@ -1,1 +1,3 @@
-<%= link_to "Add Expenditure", new_user_expenditure_path(user_id: session[:user_id]) %>
+<%= link_to new_user_expenditure_path(user_id: session[:user_id]) do %>
+  <i class='fa fa-large fa-dollar'></i>
+<% end %>

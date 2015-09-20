@@ -5,6 +5,7 @@
     <h3><%= link_to "edit budget", edit_user_month_budget_path({user_id: @user.id, id: @user.month_budget.id}) %></h3>
   </div>
   <div class="budgetExpenditures">
+    <h3>Recent Expenditures</h3>
     <%= show_expenditures(@month_budget) %>
   </div>  
 </div>

@@ -18,6 +18,15 @@ a {
   text-decoration: none;
 }
 
+.fa {
+  height: 200%;
+  width: 200%;
+}
+
+.app-body {
+  padding-top: 10%;
+}
+
 .nav-bar {
   background-color: red;
   height: 10%;
@@ -29,13 +38,16 @@ a {
   top: 0px;
 }
 
+.top-nav a {
+  margin: 0 auto;
+}
+
 .bottom-nav {
   bottom: 0px;
 }
 
 .nav-bar div {
   display:inline;
-  height: 80%;
 }
 
 .bottom-nav :first-child {
