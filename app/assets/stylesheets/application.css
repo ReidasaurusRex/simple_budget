@@ -11,45 +11,6 @@
  * file per style scope.
  *
  *= require_tree .
- *= require_self
+ *= require main
  *= require font-awesome
  */
-a {
-  text-decoration: none;
-}
-
-.fa {
-  height: 200%;
-  width: 200%;
-}
-
-.app-body {
-  padding-top: 10%;
-}
-
-.nav-bar {
-  background-color: red;
-  height: 10%;
-  position: fixed;
-  width: 100%;
-}
-
-.top-nav {
-  top: 0px;
-}
-
-.top-nav a {
-  margin: 0 auto;
-}
-
-.bottom-nav {
-  bottom: 0px;
-}
-
-.nav-bar div {
-  display:inline;
-}
-
-.bottom-nav :first-child {
-  padding-left: 10%
-}
