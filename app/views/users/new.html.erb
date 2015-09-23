@@ -1,20 +1,18 @@
-<h1>Sign Up</h1>
-<div class="newUserForm">
+<div class="user-new">
+  <h1>Sign Up</h1>
   <%= form_for User.new do |f| %>
     <div class="form-field">
-      <p><%= f.text_field(:username, required: true, autofocus: true) %><br><span>Username</span></p>
+      <%= f.text_field(:username, required: true, autofocus: true) %><br><span>Username</span>
     </div>
     <div class="form-field">
-      <p><%= f.text_field(:email, required: true) %><br><span>Email</span></p>
+      <%= f.text_field(:email, required: true) %><br><span>Email</span>
     </div>
     <div class="form-field">
-      <p><%= f.password_field(:password, required: true) %><br><span>Password</span></p>
+      <%= f.password_field(:password, required: true) %><br><span>Password</span>
     </div>
     <div class="form-field">
-      <p><%= f.password_field(:password_confirmation, required: true) %><br><span>Confirm Password</span></p>
+      <%= f.password_field(:password_confirmation, required: true) %><br><span>Confirm Password</span>
     </div>
-    <p>
     <%= f.submit "Create Account" %>
-    </p>
   <% end %>
 </div>

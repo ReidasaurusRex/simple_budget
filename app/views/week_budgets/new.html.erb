@@ -1,11 +1,9 @@
-<div class="budgetNew">
+<div class="budget-new">
   <h2>Create Week Budget</h2>
-  <div class="budgetNewForm">
-    <%= form_for [@user, WeekBudget.new] do |form| %>
-      <div class="form-field">
-        <p><%= form.text_field :target_amount %><br><span>Target Budget Amount</span></p>
-      </div>
-      <p><%= form.submit "Create Budget" %></p>
-    <% end %>
-  </div>
+  <%= form_for [@user, WeekBudget.new] do |form| %>
+    <div class="form-field">
+      <%= form.text_field :target_amount %><br><span>Target Budget Amount</span>
+    </div>
+    <%= form.submit "Create Budget" %>
+  <% end %>
 </div>

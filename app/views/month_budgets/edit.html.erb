@@ -1,9 +1,9 @@
-<div class="userBudgetForm">
+<div class="budget-edit">
   <h2>Edit Month Budget</h2>
   <%= form_for [@user, @month_budget] do |form| %>
     <div class="form-field">
-      <p><%= form.text_field :target_amount %><br><span>Edit Amount</span></p>
+      <%= form.text_field :target_amount %><br><span>Edit Amount</span>
     </div>
-    <p><%= form.submit "Change Budget" %></p>
+    <%= form.submit "Change Budget" %>
   <% end %>
 </div>

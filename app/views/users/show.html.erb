@@ -1,7 +1,7 @@
 
 <h1><%= @user.smart_username + '\'s budget summary' %></h1>
 
-<div class="userShowBudgetSummary">
+<div class="user-show-budget-summary">
   <h2>Week Budget</h2>
   <%= show_week_budget_summary(@user) %>
   <% if @user.week_budget %>
@@ -10,15 +10,15 @@
 </div>
 
 
-<div class="userShowBudgetSummary">
+<div class="user-show-budget-summary">
   <h2>Month Budget</h2>
   <%= show_month_budget_summary(@user) %>
   <% if @user.month_budget %>
-    <h3><%= link_to "show month", user_month_budget_path({user_id: @user.id, id: @user.month_budget.id}) %></h3>
+    <%= link_to "show month", user_month_budget_path({user_id: @user.id, id: @user.month_budget.id}) %>
   <% end %>
 </div>
 
-<div class="budgetExpenditures">
+<div class="budget-expenditures">
   <h2>Recent Expenditures</h2>
   <%= show_expenditures(@user) %>
 </div>
