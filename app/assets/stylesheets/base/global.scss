@@ -1,6 +1,7 @@
 $global-background: #EDECDA;
+$section-label-color: #ADAC9F;
 $form-background: #F6FFF8;
-$label-color: #ADAC9F;
+$form-label-color: #FFFFF1;
 
 body {
   background-color: $global-background;
@@ -18,15 +19,31 @@ h1 {
 
 h2 {
   font-size: 2.5em;
-  color: $label-color;
+  color: $section-label-color;
 }
 
 h3 {
   font-size: 1.8em;
-  color: $label-color;
+  color: $section-label-color;
 }
 
+// Form stylings
 input {
   background-color: $form-background;
   border-radius: 2px;
+}
+
+.form-field {
+  width: 60%;
+}
+
+input[type=text], input[type=password] {
+  position: relative;
+  width: 100%;
+}
+
+.form-field h4 {
+  color: $form-label-color;
+  position: relative;
+  text-align: center;
 }
