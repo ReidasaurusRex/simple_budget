@@ -2,16 +2,16 @@
   <h1>Sign Up</h1>
   <%= form_for User.new do |f| %>
     <div class="form-field">
-      <%= f.text_field(:username, required: true, autofocus: true) %><br><span>Username</span>
+      <%= f.text_field(:username, required: true, autofocus: true) %><h4>Username</h4>
     </div>
     <div class="form-field">
-      <%= f.text_field(:email, required: true) %><br><span>Email</span>
+      <%= f.text_field(:email, required: true) %><h4>Email</h4>
     </div>
     <div class="form-field">
-      <%= f.password_field(:password, required: true) %><br><span>Password</span>
+      <%= f.password_field(:password, required: true) %><h4>Password</h4>
     </div>
     <div class="form-field">
-      <%= f.password_field(:password_confirmation, required: true) %><br><span>Confirm Password</span>
+      <%= f.password_field(:password_confirmation, required: true) %><h4>Confirm Password</h4>
     </div>
     <%= f.submit "Create Account" %>
   <% end %>

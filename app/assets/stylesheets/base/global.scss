@@ -1,0 +1,32 @@
+$global-background: #EDECDA;
+$form-background: #F6FFF8;
+$label-color: #ADAC9F;
+
+body {
+  background-color: $global-background;
+  bottom: 0px;
+  margin: 0 auto;
+  position: absolute;
+  top: 0px;
+}
+
+// Headers and section labels
+h1 {
+  font-size: 4em;
+  color: white;
+}
+
+h2 {
+  font-size: 2.5em;
+  color: $label-color;
+}
+
+h3 {
+  font-size: 1.8em;
+  color: $label-color;
+}
+
+input {
+  background-color: $form-background;
+  border-radius: 2px;
+}

@@ -3,10 +3,10 @@
   <%= form_for [@user, Expenditure.new] do |form| %>
     Omit from weekly expense<%= check_box_tag(:omit_from_week) %>
     <div class="form-field">
-      <%= form.text_field :amount %><br><span>Amount</span>
+      <%= form.text_field :amount %><h4>Amount</h4>
     </div>
     <div class="form-field">
-      <%= form.text_field :location %><br><span>Location</span>
+      <%= form.text_field :location %><h4>Location</h4>
     </div>
     <%= form.submit "Add Expenditure" %>
   <% end %>
