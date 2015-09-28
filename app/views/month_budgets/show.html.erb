@@ -1,6 +1,6 @@
 <div class="budgetShow">
   <div class="budgetShowSummary">
-    <h2>Your Month Budget</h2>
+    <h1>Your Month Budget</h1>
     <%= show_month_budget_summary(@user) %>
     <h3><%= link_to "edit budget", edit_user_month_budget_path({user_id: @user.id, id: @user.month_budget.id}) %></h3>
   </div>
