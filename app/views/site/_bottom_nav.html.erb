@@ -1,23 +1,23 @@
-<div class="bottom-nav-inner">
+<div class="nav-bar-inner bottom-nav-inner">
   <% unless @about %>
-  <div class="bottom-nav-button bottom-nav-about-button">
-      <%= link_to about_path do %>
-        <i class='fa fa-question'></i>
-      <% end %>
-    <% end %>
-  </div>
+    <div class="bottom-nav-button bottom-nav-about-button">
+        <%= link_to about_path do %>
+          <i class='fa fa-question'></i>
+        <% end %>
+    </div>
+  <% end %>
   <% unless @home %>
-  <div class="bottom-nav-button bottom-nav-home-button">
-      <%= link_to root_path do %>
-        <i class='fa fa-home'></i>
-      <% end %>
-    <% end %>
-  </div>  
+    <div class="bottom-nav-button bottom-nav-home-button">
+        <%= link_to root_path do %>
+          <i class='fa fa-home'></i>
+        <% end %>
+    </div>  
+  <% end %>
   <% if session[:user_id] %>
-  <div class="bottom-nav-button bottom-nav-signout-button">
-      <%= link_to(sign_out_path, method: :delete) do %>
-        <i class='fa fa-sign-out'></i>
-      <% end %>
-    <% end %>
-  </div>
+    <div class="bottom-nav-button bottom-nav-signout-button">
+        <%= link_to(sign_out_path, method: :delete) do %>
+          <i class='fa fa-sign-out'></i>
+        <% end %>
+    </div>
+  <% end %>
 </div>

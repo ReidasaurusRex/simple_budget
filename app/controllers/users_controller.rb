@@ -38,7 +38,7 @@ class UsersController < ApplicationController
       redirect_to user_path(@user)
     else
       @user.destroy
-      flash[:alert] = @user.errors.full_messages.join(", ")
+      flash[:notice] = @user.errors.full_messages.join(", ")
       redirect_to new_user_path
     end
   end

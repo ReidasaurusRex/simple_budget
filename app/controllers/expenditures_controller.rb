@@ -6,7 +6,6 @@ class ExpendituresController < ApplicationController
   end
 
   def create
-    binding.pry
     create_expenditures(@user, expenditure_params, params[:omit_from_week])
   end
 
@@ -21,8 +20,13 @@ class ExpendituresController < ApplicationController
 
   private
   def create_expenditures(user, expenditure_params, omit)
-    Expenditure.add_expenditures(user, expenditure_params, omit)
-    redirect_to user_path(@user)
+    errors = Expenditure.add_expenditures(user, expenditure_params, omit)
+    if errors
+      flash[:notice] = "Please enter a location and number amount"
+      redirect_to new_user_expenditure_path(@user)
+    else
+      redirect_to user_path(@user)
+    end
   end
 
   def expenditure_params

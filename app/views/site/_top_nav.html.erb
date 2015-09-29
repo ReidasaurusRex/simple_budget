@@ -1,0 +1,12 @@
+<div class="nav-bar-inner top-nav-inner">
+  <%= new_expenditure_if_logged_in %>
+  
+  <% if flash[:notice] %>
+  <div class="flash-div">
+  <% flash.each do |key, value| %>
+      <%= content_tag :h4, value, class: 'flash-message' %>
+  <% end %>
+  </div>
+  <% end %>
+  
+</div>

@@ -47,7 +47,7 @@ class WeekBudgetsController < ApplicationController
       redirect_to user_week_budget_path({user_id: @user.id, id: week_budget.id})
     else
       week_budget.destroy
-      flash[:alert] = "Please enter a number for your budget"
+      flash[:notice] = "Please enter a number for your budget"
       redirect_to new_user_week_budget_path(@user)
     end
   end

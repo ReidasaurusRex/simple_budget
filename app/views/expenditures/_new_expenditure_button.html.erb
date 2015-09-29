@@ -1,3 +1,5 @@
-<%= link_to new_user_expenditure_path(user_id: session[:user_id]) do %>
-  <i class='fa fa-large fa-dollar'></i>
-<% end %>
+<div class="expenditure-button center-button">
+  <%= link_to new_user_expenditure_path(user_id: session[:user_id]) do %>
+    <i class='fa fa-large fa-dollar'></i>
+  <% end %>
+</div>
