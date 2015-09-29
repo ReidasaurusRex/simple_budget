@@ -1,0 +1,51 @@
+// General
+.nav-bar {
+  background-color: #88CCFB;
+  height: 4.2em;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+
+.nav-bar-inner {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.nav-bar-inner div {
+  display: table-cell;
+  height: 4.5em;
+  text-align: center;
+}
+
+// Top
+.top-nav {
+  border-bottom: 1px solid white;
+  top: 0px;
+}
+
+.top-nav-inner div:nth-child(2) {
+  border-left: 1px solid white;
+}
+
+// Bottom
+.bottom-nav {
+  border-top: 1px solid white;
+  bottom: 0px;
+}
+
+.bottom-nav-inner div:first-child {
+  border-right: 1px solid white;
+}
+
+.bottom-nav-inner div:nth-child(3) {
+  border-left: 1px solid white;
+}
+
+// Icon and flash stylings
+.nav-bar-inner div a i, .flash-message {
+  color: white;
+  line-height: 4.5em;
+  vertical-align: center; 
+}
