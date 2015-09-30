@@ -1,11 +1,11 @@
-// Place all the styles related to the expenditures controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import '../base/variables.scss';
 
-.budget-expenditures h2:first-child {
-  margin-bottom: 0.2em;
+.budget-expenditures {
+  position: relative;
+  margin-left: 0;
 }
 
-.budget-expenditures table {
-  display: inline-block;
+.budget-expenditures td, .budget-expenditures th {
+  padding-bottom: 1em;
+  padding-right: 1em;
 }

@@ -1,0 +1,19 @@
+@import '../base/variables.scss';
+
+.about-info {
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.about-info p {
+  color: $text-color;
+  font-size: 1.3em;
+  line-height: 2em; 
+}
+
+.about-info p strong {
+  color: white;
+  font-size: 1.6em;
+  font-style: bold;
+  margin-right: 0.6em;
+}

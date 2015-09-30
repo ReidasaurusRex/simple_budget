@@ -1,7 +1,10 @@
 <div class="expenditure-new">
   <h1>Add Expenditure</h1>
   <%= form_for [@user, Expenditure.new] do |form| %>
-    Omit from weekly expense<%= check_box_tag(:omit_from_week) %>
+    <div class="form-checkbox">
+      <%= check_box_tag(:omit_from_week) %>
+      <label for="omit_from_week">Omit From Week</label>
+    </div>
     <div class="form-field">
       <%= form.text_field :amount %><h4>Amount</h4>
     </div>

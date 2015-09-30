@@ -18,10 +18,10 @@ class AccessController < ApplicationController
           flash[:success] = 'Thanks for logging in!'
           redirect_to user_path(id: user.id)
         else
-          redirect_to '/', notice: 'Incorrect email or password'
+          redirect_to '/', notice: 'Sorry, incorrect email or password :('
         end
       else
-        redirect_to '/', notice:  'Incorrect email or password'
+        redirect_to '/', notice:  'Sorry, incorrect email or password :('
       end
     else
       redirect_to '/', notice: 'Please enter an email and password'

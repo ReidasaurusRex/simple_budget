@@ -1,0 +1,20 @@
+@import '../base/variables.scss';
+
+.form-field, .form-checkbox {
+  margin-bottom: 2em;
+  margin-left: 0;
+  width: 40%;
+}
+
+input[type=text], input[type=password] {
+  background-color: #FFFFEB;
+  border-radius: 10px;
+  height: 2.5em;
+  width: 100%;
+}
+
+.form-field h4 {
+  color: $text-color;
+  // position: relative;
+  text-align: left;
+}

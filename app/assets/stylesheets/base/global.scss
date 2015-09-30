@@ -1,28 +1,30 @@
-$text-color: #707070;
+@import 'variables.scss';
+
 $form-label-color: #FFFFF1;
 
 body {
   background-color: #B7E7FF;
+  font-family: $font-stack;
 }
 
 // Nav and body positioning
-.app-body {
-  margin-bottom: 4.5em;
-  margin-top: 4.5em;
-  text-align: center;
-}
-
 .app-body-outer {
   display: table;
   position: absolute;
   height: 100%;
-  margin-top: -4.5em;
+  left: 0;
+  right: 0;
   width: 100%;
 }
 
 .app-body-middle {
   display: table-cell;
   vertical-align: middle;
+}
+
+.app-body-middle div:first-child {
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 // Headers and section labels
@@ -42,29 +44,4 @@ h2 {
 
 h3 {
   font-size: 1.4em;
-}
-
-// Form stylings
-input {
-  background-color: #FFFFEB;
-  border-radius: 2px;
-  height: 1.7em;
-}
-
-.form-field {
-  margin: 0 auto;
-  width: 60%;
-}
-
-input[type=text], input[type=password] {
-  position: relative;
-  width: 100%;
-}
-
-input
-
-.form-field h4 {
-  color: $text-color;
-  position: relative;
-  text-align: center;
 }
