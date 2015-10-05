@@ -1,0 +1,24 @@
+@import "../base/variables.scss";
+
+.budget-show a {
+  margin-bottom: 5em;
+}
+
+.user-show-budget-summary {
+  margin-bottom: 5%;
+}
+
+.user-show-budget-summary p {
+  font-size: 1.5em;
+}
+
+.user-show-budget-summary span:first-child {
+  font-size: 0.85em;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+.user-show-budget-summary span:last-child {
+  color: white;
+  margin-left: 8%;
+}

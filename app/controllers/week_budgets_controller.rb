@@ -54,6 +54,7 @@ class WeekBudgetsController < ApplicationController
 
   def update_week_budget(edit_week_budget_params)
     @week_budget.update(edit_week_budget_params)
+    flash[:notice] = "Updated Budget"
     redirect_to user_week_budget_path({user_id: @user.id, id: @week_budget.id})
   end
 end

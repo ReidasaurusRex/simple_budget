@@ -14,6 +14,7 @@ input {
 }
 input[type=text], input[type=password] {
   padding-left: 7%;
+  margin-bottom: 1px;
   width: 100%;
 }
 
@@ -21,11 +22,11 @@ input[type=text], input[type=password] {
   width: 15%;
 }
 
-.user-new input[type=submit], .budget-new input[type=submit] {
+.user-new input[type=submit], .budget-new input[type=submit], .budget-edit input[type=submit] {
   width: 30%;
 }
 
 .form-field h4 {
   color: $text-color;
-  text-align: left;
+  margin-left: 7%;
 }
