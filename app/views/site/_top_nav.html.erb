@@ -1,12 +1,13 @@
-<div class="nav-bar-inner top-nav-inner">
-  <%= new_expenditure_if_logged_in %>
+<table class="nav-bar-inner top-nav-inner">
+<tr>
+  <td><%= new_expenditure_if_logged_in %></td>
   
   <% if flash[:notice] %>
-  <div class="flash-div">
+  <td colspan="2" class="flash-div">
   <% flash.each do |key, value| %>
       <%= content_tag :h4, value, class: 'flash-message' %>
   <% end %>
-  </div>
+  </td>
   <% end %>
-  
-</div>
+</tr>
+</table>

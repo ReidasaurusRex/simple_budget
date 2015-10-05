@@ -2,20 +2,18 @@
 // General
 .nav-bar {
   background-color: #88CCFB;
-  height: 4.2em;
+  height: 4.6em;
   position: fixed;
   width: 100%;
   z-index: 2;
 }
 
 .nav-bar-inner {
-  display: table;
   table-layout: fixed;
   width: 100%;
 }
 
-.nav-bar-inner div {
-  display: table-cell;
+.nav-bar-inner td {
   height: 4.5em;
   text-align: center;
 }
@@ -26,7 +24,7 @@
   top: 0px;
 }
 
-.top-nav-inner div:nth-child(2) {
+.top-nav-inner td:nth-child(2) {
   border-left: 1px solid white;
 }
 
@@ -36,12 +34,12 @@
   bottom: 0px;
 }
 
-.bottom-nav-inner div:nth-child(3), .bottom-nav-inner div:nth-child(2) {
+.bottom-nav-inner td:nth-child(3), .bottom-nav-inner td:nth-child(2) {
   border-left: 1px solid white;
 }
 
 // Icon and flash stylings
-.nav-bar-inner div a i, .flash-message {
+.nav-bar-inner td a i, .flash-message {
   color: white;
   line-height: 4.5em;
   vertical-align: center; 
