@@ -8,28 +8,6 @@ body {
   height: 100%;
 }
 
-// Nav and body positioning
-.app-body-outer {
-  display: table;
-  padding-bottom: 4.8em;
-  padding-top: 4.8em;
-  position: absolute;
-  height: 100%;
-  left: 0;
-  right: 0;
-  width: 100%;
-}
-
-.app-body-middle {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.app-body-middle div:first-child {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
 // Headers and section labels
 h1 {
   color: white;

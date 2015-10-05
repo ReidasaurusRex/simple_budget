@@ -6,15 +6,26 @@
   width: 40%;
 }
 
-input[type=text], input[type=password] {
+input {
   background-color: #FFFFEB;
   border-radius: 10px;
+  color: #5272BB;
   height: 2.5em;
+}
+input[type=text], input[type=password] {
+  padding-left: 7%;
   width: 100%;
+}
+
+.landing-page input[type=submit] {
+  width: 15%;
+}
+
+.user-new input[type=submit], .budget-new input[type=submit] {
+  width: 30%;
 }
 
 .form-field h4 {
   color: $text-color;
-  // position: relative;
   text-align: left;
 }

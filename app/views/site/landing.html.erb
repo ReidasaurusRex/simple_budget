@@ -1,17 +1,17 @@
 
-<div class="landingPage">
+<div class="landing-page">
   <h1>Simple Budget</h1>
-  <div class="signInBox">
+  <div class="sign-in-box">
     <h1>Sign In</h1>
-    <%= form_tag(sign_in_path, class: "sign-in-formw") %>
+    <%= form_tag(sign_in_path, class: "sign-in-form") %>
       <div class="form-field">
       <%= text_field_tag(:email, nil, autofocus: true) %><h4>Email</h4>
       </div>
       <div class="form-field">
         <%= password_field_tag(:password) %><h4>Password</h4>
       </div>
-        <%= submit_tag "Sign In", class: "signInSubmit" %>
-    </div>
+      <%= submit_tag "Sign In", class: "sign-in-submit" %>
+  </div>
   <h3>Or</h3>
-  <%= link_to "Sign Up", new_user_path, class: "signUpButton" %>
+  <%= link_to "Sign Up", new_user_path, class: "sign-up-button" %>
 </div>
