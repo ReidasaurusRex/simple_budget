@@ -3,8 +3,8 @@ class User < ActiveRecord::Base
   validates :email, confirmation: true, uniqueness: true
   has_secure_password
 
-  has_one :week_budget
-  has_one :month_budget
+  has_many :week_budgets
+  has_many :month_budgets
   has_many :expenditures, as: :spendable
   
   def smart_username
