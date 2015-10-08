@@ -3,9 +3,9 @@ class User < ActiveRecord::Base
   validates :email, confirmation: true, uniqueness: true
   has_secure_password
 
-  has_many :week_budgets
-  has_many :month_budgets
-  has_many :expenditures, as: :spendable
+  has_many :week_budgets, dependent: :destroy
+  has_many :month_budgets, dependent: :destroy
+  has_many :expenditures, as: :spendable, dependent: :destroy
   
   def smart_username
     username = self.username
