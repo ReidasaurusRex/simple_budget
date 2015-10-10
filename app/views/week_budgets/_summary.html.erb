@@ -1,3 +1,3 @@
 <div class="user-show-budget-summary">
-  <p>$<%= '%.2f' % @user.week_budget.current_amount %><span> spent of </span>$<%= '%.2f' % @user.week_budget.target_amount %> <span><%= percent_of_budget_spent(@user.week_budget) %></span></p>
+  <p>$<%= '%.2f' % @week_budget.current_amount %><span> spent of </span>$<%= '%.2f' % @week_budget.target_amount %> <span><%= percent_of_budget_spent(@week_budget) %></span></p>
 </div>

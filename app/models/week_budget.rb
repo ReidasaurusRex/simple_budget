@@ -8,11 +8,13 @@ class WeekBudget < ActiveRecord::Base
   end
 
   def self.proper_week_budget(user)
-    current_budget = user.week_budgets.last
-    if current_budget.expired_budget?
-      return self.create(target_amount: current_budget.target_amount, user_id: user.id)
-    else
-      return current_budget
+    unless user.week_budgets.empty?
+      current_budget = user.week_budgets.last
+      if current_budget.expired_budget?
+        return self.create(target_amount: current_budget.target_amount, user_id: user.id)
+      else
+        return current_budget
+      end
     end
   end
 end

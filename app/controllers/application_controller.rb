@@ -14,8 +14,16 @@ class ApplicationController < ActionController::Base
     @user = User.find_by_id(session[:user_id])
     if @user
       return @user
-    # else
-    #   redirect to error page
     end
+  end
+
+  def get_week_budget
+    user = User.find_by_id(session[:user_id])
+    return @week_budget = WeekBudget.proper_week_budget(user)
+  end
+
+  def get_month_budget
+    user = User.find_by_id(session[:user_id])
+    return @month_budget = MonthBudget.proper_month_budget(user)
   end
 end

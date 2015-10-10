@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   before_action :get_user, except: [:new, :create]
+  before_action :get_week_budget, only: :show
+  before_action :get_month_budget, only: :show
   before_action :require_login, except: [:new, :create]
   def new
   end

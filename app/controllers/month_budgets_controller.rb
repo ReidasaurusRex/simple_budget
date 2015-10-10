@@ -29,12 +29,9 @@ class MonthBudgetsController < ApplicationController
 
 
   private
-  def get_month_budget
-    @month_budget = @user.month_budget
-  end
 
   def prevent_new_month_budget_if_existing
-    redirect_to edit_user_month_budget_path({user_id: @user.id, id: @month_budget.id}) if @user.month_budget
+    redirect_to edit_user_month_budget_path({user_id: @user.id, id: @month_budget.id}) if @user.month_budgets.last
   end
 
   def month_budget_params

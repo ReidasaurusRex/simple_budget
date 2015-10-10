@@ -29,12 +29,9 @@ class WeekBudgetsController < ApplicationController
 
 
   private
-  def get_week_budget
-    @week_budget = @user.week_budget
-  end
 
   def prevent_new_week_budget_if_existing
-    redirect_to edit_user_week_budget_path({user_id: @user.id, id: @week_budget.id}) if @user.week_budget
+    redirect_to edit_user_week_budget_path({user_id: @user.id, id: @week_budget.id}) if @user.week_budgets.last
   end
 
   def week_budget_params

@@ -2,7 +2,7 @@
   <div class="budget-show-summary">
     <h1>Your Week Budget</h1>
     <%= show_week_budget_summary(@user) %>
-    <h3><%= link_to "edit budget", edit_user_week_budget_path({user_id: @user.id, id: @user.week_budget.id}) %></h3>
+    <h3><%= link_to "edit budget", edit_user_week_budget_path({user_id: @user.id, id: @week_budget.id}) %></h3>
   </div>
   <div class="budget-expenditures">
     <h1>Recent Expenditures</h1>
